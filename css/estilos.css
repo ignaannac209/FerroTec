@@ -632,52 +632,47 @@ video{
     height: auto;
     margin-bottom: 10px;
 }
-/* Estilos generales para escritorio ya existen */
-
-/* Tablets */
-@media (max-width: 1024px) {
-    .contenedor, .contenedor-navegacion, .contenedor-encabezado, .contenedor-piepagina {
-        width: 95%;
-        padding: 0 10px;
-    }
-    .navegacion {
-        font-size: 1.1rem;
-    }
-    .imagenes-nosotros img {
-        width: 100%;
-        height: auto;
-    }
+/* === ESTILOS GENERALES === */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
 }
 
-/* Teléfonos */
-@media (max-width: 600px) {
-    .contenido-navegacion, .contenedor-encabezado, .contenedor-nosotros, .menu, .formulario-contacto, .pie-pagina {
-        flex-direction: column;
-        align-items: center;
-    }
-    .navegacion {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-    .logo h2 {
-        font-size: 1.5rem;
-    }
-    .imagenes-nosotros img {
-        width: 100%;
-        height: auto;
-        margin-bottom: 10px;
-    }
-    .contenido-header {
-        padding: 10px 0;
-    }
-    .btn, .btn-verde, .btn-rojo, .bordes {
-        width: 100%;
-        box-sizing: border-box;
-        text-align: center;
-    }
-    .formulario {
-        width: 100%;
-    }
+header {
+  background-color: #0077cc;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.box {
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 1.5rem;
+  flex: 1 1 300px;
+  max-width: 400px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* === MEDIA QUERIES RESPONSIVE === */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .box {
+    width: 90%;
+    max-width: none;
+  }
 }
