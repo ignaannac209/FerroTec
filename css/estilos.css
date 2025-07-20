@@ -632,47 +632,93 @@ video{
     height: auto;
     margin-bottom: 10px;
 }
-/* === ESTILOS GENERALES === */
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
+/* --- RESPONSIVE UNIVERSAL --- */
+
+/* Imágenes y videos nunca se salen del contenedor */
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
-header {
-  background-color: #0077cc;
-  color: white;
-  padding: 1rem;
-  text-align: center;
-}
-
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 1rem;
-  gap: 1rem;
-  justify-content: center;
-}
-
-.box {
-  background-color: white;
-  border: 1px solid #ddd;
-  padding: 1.5rem;
-  flex: 1 1 300px;
-  max-width: 400px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-/* === MEDIA QUERIES RESPONSIVE === */
+/* Ajustes generales para móviles */
 @media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-    align-items: center;
+  .contenedor, .container {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+  .contenido-header,
+  .contenido-separador,
+  .formulario-contacto,
+  .contenedor-nosotros,
+  .menu,
+  .pie-pagina {
+    padding: 1.5rem 0.5rem;
+  }
+  .contenido-separador {
+    padding: 2rem 0.5rem;
+  }
+  .contenido-separador h2 {
+    font-size: 2.2rem;
+    text-align: center;
+  }
+  .btn, .btn-verde, .btn-rojo {
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 1.6rem;
+    padding: 1rem 0;
+  }
+  .platillo {
+    flex: 1 1 100%;
+    margin-bottom: 1.5rem;
     padding: 1rem;
   }
+  .navegacion {
+    width: 100vw;
+    left: 0;
+    right: 0;
+    padding: 2rem 0.5rem;
+  }
+  .logo h2 {
+    font-size: 2rem;
+  }
+}
 
-  .box {
-    width: 90%;
-    max-width: none;
+/* Ajustes para pantallas muy pequeñas */
+@media (max-width: 480px) {
+  .contenido-separador h2 {
+    font-size: 1.5rem;
+  }
+  .btn, .btn-verde, .btn-rojo {
+    font-size: 1.2rem;
+    padding: 0.8rem 0;
+  }
+  .logo h2 {
+    font-size: 1.2rem;
+  }
+}
+
+/* Hace que los elementos flexibles se apilen en móvil */
+@media (max-width: 768px) {
+  .contenido-navegacion,
+  .contenedor-encabezado,
+  .contenedor-nosotros,
+  .menu,
+  .formulario-contacto,
+  .pie-pagina {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+}
+
+/* Asegura que los formularios sean legibles en móvil */
+@media (max-width: 600px) {
+  .formulario {
+    padding: 1rem;
+  }
+  .input-formulario input,
+  .input-formulario textarea {
+    font-size: 1.2rem;
   }
 }
