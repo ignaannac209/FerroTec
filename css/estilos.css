@@ -352,7 +352,7 @@ video{
     height: 3.8rem;
 }
 .separador{
-    background-image: url('../assets/img/ensalada.webp');
+    background-image: url('../assets/img/imagen4.jpg');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -631,4 +631,53 @@ video{
     width: 300px; /* Ajusta el tamaño según lo que necesites */
     height: auto;
     margin-bottom: 10px;
+}
+/* Estilos generales para escritorio ya existen */
+
+/* Tablets */
+@media (max-width: 1024px) {
+    .contenedor, .contenedor-navegacion, .contenedor-encabezado, .contenedor-piepagina {
+        width: 95%;
+        padding: 0 10px;
+    }
+    .navegacion {
+        font-size: 1.1rem;
+    }
+    .imagenes-nosotros img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Teléfonos */
+@media (max-width: 600px) {
+    .contenido-navegacion, .contenedor-encabezado, .contenedor-nosotros, .menu, .formulario-contacto, .pie-pagina {
+        flex-direction: column;
+        align-items: center;
+    }
+    .navegacion {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .logo h2 {
+        font-size: 1.5rem;
+    }
+    .imagenes-nosotros img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+    .contenido-header {
+        padding: 10px 0;
+    }
+    .btn, .btn-verde, .btn-rojo, .bordes {
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+    }
+    .formulario {
+        width: 100%;
+    }
 }
