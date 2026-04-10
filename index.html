@@ -81,15 +81,18 @@ Aquí no solo vendemos productos, construimos confianza.
             <button class="postres btn btn-verde">Cerrajería</button>
             <button class="bebidas btn btn-verde">Herramientas</button>
         </div>
-        <div class="platillos">
-            <div class="platillo" data-platillo="ensalada">
-                <img data-src="assets/img/imagen5.jpg" alt="ensalada">
-                <h2>Toma doble TR 15A 125V blanco Eagle Línea Plata</h2>
-                <div class="precio">
-                    <p>Q18.95</p>
-                    <a href="./producto1.html" class="btn bordes">Ver más</a>
-
-                </div>
+      <div class="platillos">
+    <div class="platillo" data-platillo="ensalada">
+        <img data-src="assets/img/imagen5.jpg" alt="ensalada">
+        <h2>Toma doble TR 15A 125V blanco Eagle Línea Plata</h2>
+        <div class="precio">
+            <p>Q18.95</p>
+            <a href="./producto1.html" class="btn bordes">Ver más</a>
+            <button onclick="FerroCart.add('Toma doble TR 15A 125V blanco Eagle Línea Plata', 18.95)">
+                Agregar al carrito
+            </button>
+        </div>
+    </div>
             </div>
             <div class="platillo" data-platillo="ensalada">
                 <img data-src="assets/img/img6.jpg" alt="ensalada">
@@ -395,7 +398,8 @@ Aquí no solo vendemos productos, construimos confianza.
         <p>Todos los derechos reservados &copy; 2025 FerroTec</p>
     </footer>
     <script src="js/app.js"></script>
-
+<link rel="stylesheet" href="ferrotec-carrito.css">
+<script src="ferrotec-carrito.js"></script>
 </body>
 
 </html>
